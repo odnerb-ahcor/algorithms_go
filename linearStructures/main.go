@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/BrendoRochaDel/algorithms_go/linearStructures/linkedList"
 	"github.com/BrendoRochaDel/algorithms_go/linearStructures/queues"
 	"github.com/BrendoRochaDel/algorithms_go/linearStructures/stacks"
 )
@@ -31,4 +32,15 @@ func main() {
 	queue.Enqueue("example4")
 	err = queue.Enqueue("exampleError")
 	fmt.Println(err)
+
+	fmt.Println("\n===============LINKED==============")
+	linked := linkedList.NewLinkedList()
+
+	linked.Insert(1)
+	linked.Insert(2)
+	linked.Insert(3)
+	linked.PrintList()
+	linked.Remove(3)
+	linked.PrintList()
+
 }
